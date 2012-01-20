@@ -12,18 +12,52 @@
 /* Variables
 -------------------------------------------------- */
 
-// Links
-@linkColor:         #2a85e8;
-@linkColorHover:    #11639d;
-@linkColorFocus: 	cc4714;
+/* Global color palette from Andy Clarkes "320 and Up" boilerplate http://stuffandnonsense.co.uk/projects/320andup/ */
+/* About color palettes: http://www.stuffandnonsense.co.uk/blog/about/creating_colour_palettes */
 
-// Grays
-@white:             #fff;
-@grayLighter:       #ccc;
-@grayLight:         #777;
-@gray:              #555;
-@grayDark:          #333;
-@black:             #000;
+/*----------------------------------- */
+
+
+@basecol: rgb(123,172,200);	    // Base colour
+@compcol: spin(@basecol, 180);  	// Complementary colour
+
+// Links
+
+@linkColor: 		rgb(1,53,104);
+@linkColorHover: 	darken(@linkcol, 10);
+@linkcolvisited: 	@linkcolhover;
+@linkColorFocus: 	@linkcolhover;
+
+// greyscale
+
+@black: 			rgb(0,0,0);
+@grayDark: 			lighten(@black, 25%);
+@gray: 				lighten(@black, 50%);
+@grayLight: 		lighten(@black, 75%);
+@grayLighter: 		lighten(@black, 90%);
+@white: 			rgb(255,255,255);
+
+// colour palettes
+
+@col_l1: 	lighten(@basecol, 5%);		// Lighten base
+@col_l2: 	lighten(@basecol, 10%);
+@col_l3: 	lighten(@basecol, 15%);
+@col_l4: 	lighten(@basecol, 20%);
+
+@col_d1: 	darken(@basecol, 5%);		// Darken base
+@col_d2: 	darken(@basecol, 10%);
+@col_d3: 	darken(@basecol, 15%);
+@col_d4: 	darken(@basecol, 20%);
+
+@comp_l1: 	lighten(@compcol, 5%);		// Lighten complementary
+@comp_l2: 	lighten(@compcol, 10%);
+@comp_l3: 	lighten(@compcol, 15%);
+@comp_l4: 	lighten(@compcol, 20%);
+
+@comp_d1: 	darken(@compcol, 5%);		// Darken complementary
+@comp_d2: 	darken(@compcol, 10%);
+@comp_d3: 	darken(@compcol, 15%);
+@comp_d4: 	darken(@compcol, 20%);
 
 // Buttons Colors
 @bPrimary: 			#575757;
