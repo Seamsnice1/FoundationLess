@@ -9,50 +9,84 @@ License: http://creativecommons.org/licenses/MIT/
 Includes:
 
 
-/* ___INCLUDED IN FOUNDATION.LESS_______________________________________________________
+/* Global color palette from Andy Clarkes "320 and Up" boilerplate http://stuffandnonsense.co.uk/projects/320andup/ */
+/* About color palettes: http://www.stuffandnonsense.co.uk/blog/about/creating_colour_palettes */
 
-@basecol : rgb(123,172,200);	    // Base colour
-@compcol : spin(@basecol, 180);  	// Complementary colour
+/*----------------------------------- */
+
+
+@basecol: rgb(123,172,200);	    // Base colour
+@compcol: spin(@basecol, 180);  	// Complementary colour
+
+// Header Styles
+
+@headcol:		@basecol;		// Header colour - change to whatever you like.
+@fontStyle:		.sans-serif;		// Header Style (.sans-serif, .serif, or .monospace, or whatever we like)
 
 // Links
 
-@linkcol : rgb(1,53,104);
-@linkcolhover : darken(@linkcol, 10);
-@linkcolvisited : @linkcolhover;
-@linkcolfocus : @linkcolhover;
+@linkColor: 		rgb(1,53,104);
+@linkColorHover: 	darken(@linkcol, 10);
+@linkcolvisited: 	@linkcolhover;
+@linkColorFocus: 	@linkcolhover;
 
 // greyscale
 
-@black : rgb(0,0,0);
-@darkgrey : lighten(@black, 25%);
-@grey : lighten(@black, 50%);
-@lightgrey : lighten(@black, 75%);
-@lightergrey : lighten(@black, 90%);
-@white : rgb(255,255,255);
+@black: 			rgb(0,0,0);
+@grayDark: 			lighten(@black, 25%);
+@gray: 				lighten(@black, 50%);
+@grayLight: 		lighten(@black, 75%);
+@grayLighter: 		lighten(@black, 90%);
+@white: 			rgb(255,255,255);
 
 // colour palettes
 
-@col_l1 : lighten(@basecol, 5%);
-@col_l2 : lighten(@basecol, 10%);
-@col_l3 : lighten(@basecol, 15%);
-@col_l4 : lighten(@basecol, 20%);
+@col_l1: 	lighten(@basecol, 5%);		// Lighten base
+@col_l2: 	lighten(@basecol, 10%);
+@col_l3: 	lighten(@basecol, 15%);
+@col_l4: 	lighten(@basecol, 20%);
 
-@col_d1 : darken(@basecol, 5%);
-@col_d2 : darken(@basecol, 10%);
-@col_d3 : darken(@basecol, 15%);
-@col_d4 : darken(@basecol, 20%);
+@col_d1: 	darken(@basecol, 5%);		// Darken base
+@col_d2: 	darken(@basecol, 10%);
+@col_d3: 	darken(@basecol, 15%);
+@col_d4: 	darken(@basecol, 20%);
 
-@comp_l1 : lighten(@compcol, 5%);
-@comp_l2 : lighten(@compcol, 10%);
-@comp_l3 : lighten(@compcol, 15%);
-@comp_l4 : lighten(@compcol, 20%);
+@comp_l1: 	lighten(@compcol, 5%);		// Lighten complementary
+@comp_l2: 	lighten(@compcol, 10%);
+@comp_l3: 	lighten(@compcol, 15%);
+@comp_l4: 	lighten(@compcol, 20%);
 
-@comp_d1 : darken(@compcol, 5%);
-@comp_d2 : darken(@compcol, 10%);
-@comp_d3 : darken(@compcol, 15%);
-@comp_d4 : darken(@compcol, 20%);
+@comp_d1: 	darken(@compcol, 5%);		// Darken complementary
+@comp_d2: 	darken(@compcol, 10%);
+@comp_d3: 	darken(@compcol, 15%);
+@comp_d4: 	darken(@compcol, 20%);
 
-------------------------------------------------- */
+// Buttons Colors
+@bPrimary: 			@compcol;
+@bSecondary: 		@basecol;
+@bWhite: 			@grayLighter;
+@bBlack: 			@grayDark;
+
+// Accent Colors
+@blue:              #08b5fb;
+@green:             #46a546;
+@red:               #9d261d;
+@yellow:            #ffc40d;
+@orange:            #f89406;
+@pink:              #c3325f;
+@purple:            #7a43b6;
+
+// Baseline grid
+@baseline:          20px;
+
+// Griditude
+@gridColumns:       16;
+@gridColumnWidth:   40px;
+@gridGutterWidth:   20px;
+@siteWidth:         (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+
+/*------------------------------------*/
 
 // type
 
@@ -75,7 +109,7 @@ font-family : "Monaco", Courier New, monospace; }
 /* @baseline : 1.5em; */
 
 // MIXINS
-
+/*
 .clearfix {
 zoom : 1;
 
@@ -88,7 +122,7 @@ overflow : hidden; }
 &:after {
 clear : both; }
 }
-
+*/
 // borderradius
 
 .rounded(@radius:3px) {
