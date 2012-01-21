@@ -15,7 +15,7 @@ Includes:
 /*----------------------------------- */
 
 
-@basecol: rgb(123,172,200);	    // Base colour
+@basecol: rgb(0, 113, 204);	    // Base colour
 @compcol: spin(@basecol, 180);  	// Complementary colour
 
 // Header Styles
@@ -24,7 +24,7 @@ Includes:
 
 // Links
 
-@linkcol: 		rgb(1,53,104);
+@linkcol: 		rgb(1,53,104);		// Check for colour deficiencies http://www.vischeck.com/vischeck/vischeckURL.php
 @linkcolhover: 	darken(@linkcol, 10);
 @linkcolvisited: 	@linkcolhover;
 @linkcolfocus: 	@linkcolhover;
@@ -61,10 +61,15 @@ Includes:
 @comp_d4: 	darken(@compcol, 20%);
 
 // Buttons Colors
-@bPrimary: 			@compcol;
-@bSecondary: 		@basecol;
+@bPrimary: 			@comp_l4;		// Change to a suitable primary button colour as needed.
+@bSecondary: 		@col_l4;		// Change to a suitable secondary button colour as needed.
 @bWhite: 			@grayLighter;
 @bBlack: 			@grayDark;
+
+// Table Colours
+@tablecol:			lighten(@basecol, 50%);		// Change to a visible colour if it is not displaying
+
+
 
 // Accent Colors
 @blue:              #08b5fb;

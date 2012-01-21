@@ -16,7 +16,7 @@
 /* About color palettes: http://www.stuffandnonsense.co.uk/blog/about/creating_colour_palettes */
 
 /*----------------------------------- */
-
+/*
 
 @basecol: rgb(123,172,200);	    // Base colour
 @compcol: spin(@basecol, 180);  	// Complementary colour
@@ -85,12 +85,13 @@
 @gridColumns:       16;
 @gridColumnWidth:   40px;
 @gridGutterWidth:   20px;
-@siteWidth:         (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+@siteWidth:         (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1)); 
 
+---*/
 
+/* ---- Mixins ---*/
 
-
-
+@import "mixins";
 
 
 
@@ -311,7 +312,8 @@ table {
 }
 table thead,
 table tfoot {
-    background: @grayLighter;
+    /*background: @grayLighter;*/
+    background-color: darken(@tablecol, 5%);
 }
 table thead tr th,
 table tfoot tr th,
@@ -339,11 +341,13 @@ table tfoot tr td:last-child {
 }
 table tbody tr.even,
 table tbody tr.alt {
-    background: @grayLighter:
-}
+    /*background: @grayLighter;*/
+    background-color: @tablecol; }
+    
 table tbody tr:nth-child(even) {
-    background: @grayLighter:
-}
+    /*background: @grayLighter;*/
+    background-color: @tablecol; }
+    
 table tbody tr td {
     color: lighten(@black, 15%);
     padding: 9px 10px;
@@ -353,13 +357,13 @@ table tbody tr td {
     
 // TABLES (320 and Up additions) =============================================================================
 tfoot { 
-font-style : italic; }
+font-style: italic; }
 
 caption { 
-background-color : transparent; }
+background-color: transparent; }
 
-tbody tr:nth-child(odd) td {
-background-color : @col_l4; }        
+/* tbody tr:nth-child(odd) td {
+background-color: lighten(@col_l4, 40%); }       */ 
    
      
 
@@ -390,7 +394,7 @@ h5,
 h6 {
     color: @headcol;
     font-weight: bold;
-    .sans-serif;
+    .serif;
 }
 h1 a,
 h2 a,
@@ -2542,3 +2546,4 @@ table.hide-on-tablets {
     color: @color;
   }
 }
+
