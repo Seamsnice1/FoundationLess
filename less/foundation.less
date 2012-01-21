@@ -249,12 +249,19 @@ a:hover {
 }
 a:focus {
     color: @linkColorFocus;
-    outline: none;
+    outline: thin dotted;
 }
 p a,
 p a:visited {
     line-height: inherit
 }
+
+// LINKS (320 and Up additions) =============================================================================
+
+a:visited { 
+color : @linkcolvisited; }
+
+
 /*    --------------------------------------------------
     :: Lists
     -------------------------------------------------- */
@@ -340,7 +347,7 @@ table tbody tr td {
     border: none;
 }
     
-// 6.TABLES (320 and Up additions) =============================================================================
+// TABLES (320 and Up additions) =============================================================================
 tfoot { 
 font-style : italic; }
 
