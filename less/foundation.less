@@ -21,6 +21,10 @@
 @basecol: rgb(123,172,200);	    // Base colour
 @compcol: spin(@basecol, 180);  	// Complementary colour
 
+// Header Color
+
+@headcol:		@basecol;		// Header colour - change to whatever you like.
+
 // Links
 
 @linkColor: 		rgb(1,53,104);
@@ -384,7 +388,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #181818;
+    color: @headcol;
     font-weight: bold;
     line-height: 1.25;
 }
@@ -428,7 +432,7 @@ h6 {
     font-weight: normal;
 }
 .subheader {
-    color: #777;
+    color: @gray;
     font-weight: 300;
     margin-bottom: 24px;
 }
@@ -463,18 +467,18 @@ h2 small,
 h3 small,
 h4 small,
 h5 small {
-    color: #777
+    color: @gray;
 }
 /*    Blockquotes  */
 blockquote,
 blockquote p {
     line-height: 20px;
-    color: #777;
+    color: @gray;
 }
 blockquote {
     margin: 0 0 18px;
     padding: 9px 20px 0 19px;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid @grayLight;
 }
 blockquote cite {
     display: block;
@@ -490,7 +494,7 @@ blockquote cite a:visited {
     color: @gray
 }
 hr {
-    border: solid #ddd;
+    border: solid @grayLight;
     border-width: 1px 0 0;
     clear: both;
     margin: 12px 0 18px;
@@ -501,12 +505,34 @@ acronym {
     text-transform: uppercase;
     font-size: 90%;
     color: #222;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid @grayLight;
     cursor: help;
 }
 abbr {
     text-transform: none
 }
+
+// TYPOGRAPHY (320 and Up typography addtions) =============================================================================
+
+abbr[title] { 
+border-bottom : 1px dotted; 
+cursor : help; }
+
+ins { 
+background-color : lighten(@basecol, 20%); 
+color : @black; 
+text-decoration : none; }
+
+mark { 
+background-color : lighten(@basecol, 20%); 
+color : @black; 
+font-style : italic; 
+font-weight : bold; }
+
+dfn { 
+font-style : italic; }
+
+
 /**
       * Print styles.
      *
