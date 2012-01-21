@@ -21,9 +21,10 @@
 @basecol: rgb(123,172,200);	    // Base colour
 @compcol: spin(@basecol, 180);  	// Complementary colour
 
-// Header Color
+// Header Styles
 
 @headcol:		@basecol;		// Header colour - change to whatever you like.
+@fontStyle:		.sans-serif;		// Header Style (.sans-serif, .serif, or .monospace, or whatever we like)
 
 // Links
 
@@ -376,7 +377,7 @@ background-color : @col_l4; }
     display: none
 }
 .highlight {
-    background: #ff0
+    background: @basecol;
 }
 /* Arfully Masterminded by ZURB */
 /*    --------------------------------------------------
@@ -390,7 +391,7 @@ h5,
 h6 {
     color: @headcol;
     font-weight: bold;
-    line-height: 1.25;
+    @fontStyle;
 }
 h1 a,
 h2 a,
@@ -401,52 +402,48 @@ h6 a {
     font-weight: inherit
 }
 h1 {
-    font-size: 46px;
-    font-size: 4.6rem;
-    margin-bottom: 12px;
-}
-h2 {
-    font-size: 35px;
-    font-size: 3.5rem;
-    margin-bottom: 9px;
-}
-h3 {
-    font-size: 28px;
-    font-size: 2.8rem;
-    margin-bottom: 9px;
-}
-h4 {
-    font-size: 21px;
-    font-size: 2.1rem;
-    margin-bottom: 3px;
-}
-h5 {
-    font-size: 18px;
-    font-size: 1.8rem;
-    font-weight: normal;
-    margin-bottom: 3px;
-}
-h6 {
-    font-size: 15px;
-    font-size: 1.5rem;
-    font-weight: normal;
-}
+    margin-bottom : @baseline / 2;
+    .font-size(48);
+    line-height : 1.2; }
+
+h2 { 
+margin-bottom : @baseline / 2;
+.font-size(32);
+line-height : 1.2; }
+
+h3 { 
+margin-bottom : @baseline / 1.5;
+.font-size(24);
+line-height : 1.3; }
+
+h4 { 
+margin-bottom : @baseline / 1.5;
+.font-size(18);
+line-height : 1.25; }
+
+h5 { 
+margin-bottom : @baseline;
+.font-size(16);  }
+
+h6 { 
+.font-size(16); }
+
 .subheader {
     color: @gray;
     font-weight: 300;
     margin-bottom: 24px;
 }
 p {
-    line-height: 17px;
-    margin: 0 0 18px;
+    line-height: 1.5;
+    margin-bottom : @baseline;
+    .font-size(16);
 }
 p img {
     margin: 0
 }
 p.lead {
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 24px;
+    .font-size(18);
+    line-height: 1.5;
 }
 em,
 i {
@@ -472,18 +469,18 @@ h5 small {
 /*    Blockquotes  */
 blockquote,
 blockquote p {
-    line-height: 20px;
+    line-height: @baseline;
     color: @gray;
 }
 blockquote {
-    margin: 0 0 18px;
+    margin : 0 0 @baseline -24px;
     padding: 9px 20px 0 19px;
     border-left: 1px solid @grayLight;
+    font-style : italic;
 }
 blockquote cite {
     display: block;
-    font-size: 12px;
-    font-size: 1.2rem;
+    .font-size(12);
     color: @gray;
 }
 blockquote cite:before {
