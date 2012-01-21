@@ -1,0 +1,61 @@
+/* 320 and Up _________________________________________________
+
+320 and Up
+Andy Clarke http://about.me/malarkey
+LESS Version: 2
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+License: http://creativecommons.org/licenses/MIT/
+
+Includes:
+
+
+/* Global color palette from Andy Clarkes "320 and Up" boilerplate http://stuffandnonsense.co.uk/projects/320andup/ */
+/* About color palettes: http://www.stuffandnonsense.co.uk/blog/about/creating_colour_palettes */
+/*----------------------------------- */
+/*------------------------------------*/
+.sans-serif {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.serif {
+  font-family: "Cambria, Georgia, Times, " Times New Roman;
+}
+.monospace {
+  font-family: "Monaco", Courier New, monospace;
+}
+/* @baseline : 1.5em; */
+/*
+.clearfix {
+zoom : 1;
+
+&:before, &:after {
+content : "\0020"; 
+display : block; 
+height : 0; 
+overflow : hidden; }
+
+&:after {
+clear : both; }
+}
+*/
+/*------// csscolumns
+
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #eee, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+-webkit-column-width : @colwidth;
+-webkit-column-count : @colcount;
+-webkit-column-gap : @colgap;
+-webkit-column-rule-color : @columnRuleColor;
+-webkit-column-rule-style : @columnRuleStyle;
+-webkit-column-rule-width : @columnRuleWidth;
+-moz-column-width : @colwidth;
+-moz-column-count : @colcount;
+-moz-column-gap : @colgap;
+-moz-column-rule-color : @columnRuleColor;
+-moz-column-rule-style : @columnRuleStyle;
+-moz-column-rule-width : @columnRuleWidth;
+column-width : @colwidth;
+column-count : @colcount;
+column-gap : @colgap;
+column-rule-color : @columnRuleColor;
+column-rule-style : @columnRuleStyle;
+column-rule-width : @columnRuleWidth; }
+---------------*/

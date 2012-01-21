@@ -24,14 +24,13 @@
 // Header Styles
 
 @headcol:		@basecol;		// Header colour - change to whatever you like.
-@fontStyle:		.sans-serif;		// Header Style (.sans-serif, .serif, or .monospace, or whatever we like)
 
 // Links
 
-@linkColor: 		rgb(1,53,104);
-@linkColorHover: 	darken(@linkcol, 10);
+@linkcol: 		rgb(1,53,104);
+@linkcolhover: 	darken(@linkcol, 10);
 @linkcolvisited: 	@linkcolhover;
-@linkColorFocus: 	@linkcolhover;
+@linkcolfocus: 	@linkcolhover;
 
 // greyscale
 
@@ -245,15 +244,15 @@ body {
     :: Links
     -------------------------------------------------- */
 a {
-    color: @linkColor;
+    color: @linkcol;
     text-decoration: none;
     line-height: inherit;
 }
 a:hover {
-    color: @linkColorHover
+    color: @linkcolhover
 }
 a:focus {
-    color: @linkColorFocus;
+    color: @linkcolfocus;
     outline: thin dotted;
 }
 p a,
@@ -391,7 +390,7 @@ h5,
 h6 {
     color: @headcol;
     font-weight: bold;
-    @fontStyle;
+    .sans-serif;
 }
 h1 a,
 h2 a,
@@ -1304,7 +1303,7 @@ div.panel {
     height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 4px solid @linkColor;
+    border-top: 4px solid @linkcol;
     display: block;
     position: absolute;
     right: 18px;
@@ -1653,11 +1652,11 @@ form.custom div.custom.dropdown ul li.selected {
     background: url(../images/misc/custom-form-sprites.png) right -52px no-repeat
 }
 form.custom div.custom.dropdown ul li:hover {
-    background-color: @linkColor;
+    background-color: @linkcol;
     color: #fff;
 }
 form.custom div.custom.dropdown ul li.selected:hover {
-    background: url(../images/misc/custom-form-sprites.png) @linkColor right -78px no-repeat
+    background: url(../images/misc/custom-form-sprites.png) @linkcol right -78px no-repeat
 }
 form.custom div.custom.dropdown ul.show {
     display: block
@@ -2460,7 +2459,7 @@ table.hide-on-tablets {
         height: 0;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
-        border-top: 4px solid @linkColor;
+        border-top: 4px solid @linkcol;
         display: block;
     }
     .nav-bar>li:hover>a {
